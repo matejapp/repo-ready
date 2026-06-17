@@ -1,0 +1,12 @@
+project:
+  name: "drifted-project"
+  description: "A project where config files disagree"
+
+runtime:
+  node: ">=18"
+  packageManager: "npm"
+
+env:
+  exampleFile: ".env.example"
+  required:
+    - DATABASE_URL

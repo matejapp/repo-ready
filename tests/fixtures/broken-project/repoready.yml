@@ -1,0 +1,11 @@
+project:
+  name: "broken-project"
+  description: "A project with missing env vars"
+
+runtime:
+  node: ">=20"
+
+env:
+  required:
+    - MISSING_API_KEY
+    - ANOTHER_MISSING_VAR

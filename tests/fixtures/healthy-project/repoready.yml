@@ -1,0 +1,19 @@
+project:
+  name: "healthy-project"
+  description: "A fully-configured example project"
+
+runtime:
+  node: ">=20"
+  packageManager: "pnpm"
+
+binaries:
+  required:
+    - git
+    - node
+
+env:
+  files:
+    - ".env"
+  exampleFile: ".env.example"
+  required:
+    - HEALTHY_TOKEN

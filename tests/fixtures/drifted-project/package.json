@@ -1,0 +1,8 @@
+{
+  "name": "drifted-project",
+  "version": "1.0.0",
+  "engines": {
+    "node": ">=20"
+  },
+  "packageManager": "pnpm@9.0.0"
+}
