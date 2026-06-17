@@ -1,0 +1,7 @@
+project:
+    name: "my-test-app"
+    description: "Testing RepoReady"
+
+runtime:
+    node: ">=20"
+    packageManager: "pnpm"
