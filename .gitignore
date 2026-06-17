@@ -56,6 +56,7 @@ report.[0-9]*.[0-9]*.[0-9]*.[0-9]*.json
 .env.test.local
 .env.production.local
 *.env
+!tests/fixtures/**/.env
 
 # ==========================================
 # IDE and System Files
@@ -64,3 +65,31 @@ report.[0-9]*.[0-9]*.[0-9]*.[0-9]*.json
 .idea/
 .DS_Store
 Thumbs.db
+
+# ==========================================
+# AI Coding Assistants
+# ==========================================
+# Claude Code / Ruflo
+.claude/
+.claude-flow/
+**/.claude/
+**/.claude-flow/
+CLAUDE.md
+CLAUDE.local.md
+.claude.json
+claude*.log
+
+# OpenAI Codex
+.codex/
+**/.codex/
+.codexignore
+AGENTS.md
+AGENTS.local.md
+codex*.log
+
+# Shared agent state and generated artifacts
+.agents/
+**/.agents/
+agent-memory/
+agent-output/
+swarm-output/
