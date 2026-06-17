@@ -1,35 +1,50 @@
 {
   "name": "repo-ready",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "version": "0.1.0",
+  "description": "Validates whether your machine satisfies a repository's local setup contract",
+  "packageManager": "pnpm@10.33.0",
+  "main": "./dist/cli/index.js",
+  "files": [
+    "dist",
+    "diagnostics/__init__.py",
+    "diagnostics/main.py",
+    "diagnostics/checks/**/*.py",
+    "LICENSE",
+    "README.md"
+  ],
+  "bin": {
+    "repoready": "./dist/cli/index.js"
+  },
   "scripts": {
     "dev": "tsx src/cli/index.ts",
     "build": "tsc",
-    "test": "vitest",
-    "lint": "eslint src"
+    "pretest": "pnpm build",
+    "test": "vitest run",
+    "test:python": "python3 -m pytest diagnostics/tests -q",
+    "lint": "eslint src tests",
+    "prepack": "pnpm build"
   },
   "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "devEngines": {
-    "packageManager": {
-      "name": "pnpm",
-      "version": "^11.7.0",
-      "onFail": "download"
-    }
-  },
+  "author": "matejapp",
+  "license": "MIT",
   "type": "module",
   "devDependencies": {
     "@types/node": "^25.9.3",
+    "@types/semver": "^7.5.0",
     "eslint": "^10.5.0",
     "prettier": "^3.8.4",
     "tsx": "^4.22.4",
     "typescript": "^6.0.3",
+    "typescript-eslint": "^8.57.1",
     "vitest": "^4.1.9"
   },
   "dependencies": {
-    "commander": "^15.0.0",
+    "chalk": "^5.3.0",
+    "commander": "^14.0.0",
+    "dotenv": "^16.4.0",
+    "execa": "^9.0.0",
+    "ora": "^8.0.0",
+    "semver": "^7.6.0",
     "yaml": "^2.9.0",
     "zod": "^3.25.76"
   }

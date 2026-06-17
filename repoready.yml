@@ -1,7 +1,17 @@
 project:
-    name: "my-test-app"
-    description: "Testing RepoReady"
+  name: "repo-ready"
+  description: "Validates whether your machine satisfies a repository's local setup contract"
 
 runtime:
-    node: ">=20"
-    packageManager: "pnpm"
+  node: ">=20"
+  packageManager: "pnpm"
+
+binaries:
+  required:
+    - git
+    - node
+    - python3
+
+commands:
+  install: "pnpm install"
+  dev: "pnpm dev"
